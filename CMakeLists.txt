@@ -6,6 +6,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   message_generation
+  geometry_msgs
 )
 
 
@@ -24,6 +25,7 @@ add_service_files(
   FILES
   AddTwoInts.srv
   SendImage.srv
+  SendImu.srv
 )
 
 ## Generate actions in the 'action' folder
@@ -37,6 +39,8 @@ add_service_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  geometry_msgs
+
 )
 
 ################################################
