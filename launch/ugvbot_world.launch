@@ -17,6 +17,7 @@
     <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/igvc_cam_calib.world"/>  -->
     <arg name="world_name" value="$(find ugv_bot)/worlds/worlds/igvc2.world"/> 
     <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/movebase_testing.world"/> -->
+    <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/test_world.world"/> -->
     <!--THE EMPTY WORLD LAUNCH FILE IS CUSTOMIZED TO NOT TO PUBLISH ODOM /tf -->
   </include>
 
