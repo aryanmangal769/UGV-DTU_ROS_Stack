@@ -87,6 +87,7 @@ sudo apt-get install ros-noetic-octomap ros-noetic-octomap-mapping ros-noetic-oc
 roslaunch octomap_server octomap_mapping.launch
 
 ```
+![Screenshot from 2021-11-27 22-19-35](https://user-images.githubusercontent.com/75561320/143694804-3035ff1f-1368-4b47-812f-353138fc559d.png)
 Now you can move the robot or camera and create a octree based map in rvix
 
 ## Notes
@@ -96,6 +97,8 @@ Now you can move the robot or camera and create a octree based map in rvix
   ```sh
   echo $GAZEBO_MODEL_PATH 
   ```
+  
+  
   and make sure that the path is correct.
 
   Further, it may take some time in launch for the first time, dont panic enjoy the dark world for few minutes,
