@@ -58,6 +58,37 @@ source ~/catkin_ws/devel/setup.bash
 roslaunch ugv_bot ugvbot_world.launch
 ```
 
+## To use 3D- Octree Mapping
+
+1. Install Octomap
+```sh
+sudo apt-get install ros-noetic-octomap ros-noetic-octomap-mapping ros-noetic-octomap-msgs ros-noetic-octomap-ros ros-noetic-octomap-rviz-plugins ros-noetic-octomap-server
+
+```
+2.In /opt/ros/noetic/octomap-server/octomap-mapping.launch
+  Change the default lines to 
+  ```sh
+    <param name="frame_id" type="string" value="odom" />   #Odom or map topic
+    <remap from="cloud_in" to="/kinect_depth_cam/depth/points" />
+    
+    If using ZED
+    <remap from="cloud_in" to="/zed2i/zed_node/point_cloud/cloud_registered" />
+```
+3. Run Octomap
+3.1 For Simulation
+
+  ```sh
+  roslaunch octomap_server octomap_mapping.launch
+  roslaunch ugv_bot ugvbot_world.launch 
+
+```
+3.2For using ZED camera
+  ```sh
+roslaunch octomap_server octomap_mapping.launch
+
+```
+Now you can move the robot or camera and create a octree based map in rvix
+
 ## Notes
 - The setup assumes that you have catkin_ws folder on your home directory if not, do changes accordingly.
 
