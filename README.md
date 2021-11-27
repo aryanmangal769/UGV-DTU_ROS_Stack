@@ -12,6 +12,7 @@
 
 ## Key Features !!
 Includes Custom Scripts for :
+  - 3D mapping Octree
   - Visualizing 2d postion Covariance of the Robot as an ellipse in RVIZ.
   - Converting Lanes from Camera Image to fake_laser Message to visualize in RVIZ,\
      which can also be used in gmapping, MoveBase and Costmap2d packages.
