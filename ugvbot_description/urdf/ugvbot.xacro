@@ -178,20 +178,18 @@ Yeh URDF dynamic hai Koi bhi property ki value change karoge tou bot kutta ban j
                 <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708 "/>
         or
         2. using tf package's static_transform_publisher function which will show results only in rviz
-          i choose to showoff my understandings....... bitches.
+          i choose to showoff my understandings....... bitches. -->
    
   <joint name="camera_joint_fake" type="fixed">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708 "/>
     <parent link="camera"/>
     <child link="camera_fake"/>
   </joint>
 
   <link name="camera_fake"/> -->
-  <!--Used in gazebo reference frame name for plugin-->
+  <!-- Used in gazebo reference frame name for plugin -->
 
-  <!--
-    Laser Scannner
-  -->
+  <!--Laser Scannner-->
 
   <joint name="laser_joint" type="fixed">
     <origin xyz="${-laserSize/2+chassisLength/2} 0 ${chassisHeight/2+wheelRadius+laserSize/2}" rpy="0 0 0"/>

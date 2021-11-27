@@ -59,7 +59,7 @@
   Camera 
 -->
   <gazebo reference="camera">
-    <sensor name="camera_sensor" type="camera"> <!-- type= "depth" for depth camera-->
+    <sensor name="camera_sensor" type="depth"> <!-- type= "depth" for depth camera-->
       <update_rate>20</update_rate>
       <camera>
         <horizontal_fov>1.91986</horizontal_fov>
@@ -73,15 +73,15 @@
           <far>30</far>
         </clip>
       </camera>
-      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <!-- <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
         <imageTopicName>ugvbot/image_raw</imageTopicName>
         <cameraInfoTopicName>ugvbot/image_raw/camera_info</cameraInfoTopicName>
         <frameName>camera</frameName>
-      </plugin>
+      </plugin> -->
 
-      <!-- <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
+      <plugin name="camera_controller" filename="libgazebo_ros_openni_kinect.so">
         <baseline>0.2</baseline>
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
@@ -104,7 +104,7 @@
         <Cy>0</Cy>
         <focalLength>0</focalLength>
         <hackBaseline>0.0</hackBaseline>
-      </plugin> -->
+      </plugin>
     </sensor>
 
   </gazebo>

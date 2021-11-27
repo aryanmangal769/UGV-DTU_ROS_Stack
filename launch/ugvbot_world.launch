@@ -1,8 +1,13 @@
 <launch>
   <!--Spawning Positon & Orientation-->
-  <arg name="x" default="-10.0"/> 
+  <!-- <arg name="x" default="-10.0"/> 
   <arg name="y" default="-37.0"/>
-  <arg name="z" default="0.05"/> 
+  <arg name="z" default="0.05"/>  -->
+
+
+  <arg name="x" default="0.0"/> 
+  <arg name="y" default="0.0"/>
+  <arg name="z" default="0.0"/> 
       <!-- Starting -x -1.35 -y 1.35 -z 0.03 -Y -1.57 -->
       <!-- Final Goal -x 0.00 -y 0.00 -z 0.00 -->
   <arg name="roll" default="0.0"/>
@@ -15,9 +20,9 @@
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find ugv_bot)/launch/empty_world.launch"> -->
     <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/igvc_cam_calib.world"/>  -->
-    <arg name="world_name" value="$(find ugv_bot)/worlds/worlds/igvc2.world"/> 
+    <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/my_walls.world"/>   -->
     <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/movebase_testing.world"/> -->
-    <!-- <arg name="world_name" value="$(find ugv_bot)/worlds/test_world.world"/> -->
+    <!--arg name="world_name" value="$(find ugv_bot)/worlds/test_world.world"/-->
     <!--THE EMPTY WORLD LAUNCH FILE IS CUSTOMIZED TO NOT TO PUBLISH ODOM /tf -->
   </include>
 
